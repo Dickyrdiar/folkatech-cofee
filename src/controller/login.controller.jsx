@@ -31,13 +31,16 @@ const LoginController = () => {
   useEffect(() => {
     if (responseLogin) {
       setResponse(responseLogin)
-      localStorage.setItem("token",  headersResponse.access_token)
-      setTimeout(() => {
-        window.location.assign('/dashboard')
-      }, 500)
+      localStorage.setItem("token", responseLogin?.data?.token)
+      // setTimeout(() => {
+      //   window.location.assign('/dashboard')
+      // }, 500)
+      console.log('check respoonse', responseLogin?.data?.token);
     }
     setStartFetch(false)
   }, [responseLogin, headersResponse])
+
+
 
   useEffect(() => {
     if (errorLogin.code === 400) {
@@ -45,6 +48,8 @@ const LoginController = () => {
     }
     setStartFetch(false)
   }, [errorLogin])
+
+ 
 
 
   // handle button login

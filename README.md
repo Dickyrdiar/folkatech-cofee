@@ -7,6 +7,6 @@
 
 - dalam integrasi pada FE saya menggunakan custom hooks pada react yang saya beri nama useLogin
 
-
+- untuk penyimpana temporary saya menggunakan localstorage bisa juga menggunakan state management tapi untuk menyingkat waktu saya menggunakna localstorage
 
 

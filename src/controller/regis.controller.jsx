@@ -34,23 +34,34 @@ const RegisController = () => {
 
   useEffect(() => {
     if (responseRegis) {
-      history('/dashboard')
+      history('/')
     }
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [responseRegis])
 
+
+
   // handleclick
+  const handleClickSave = (e) => {
+    e.preventDefault()
+    localStorage.setItem('email', email)
+    localStorage.setItem('first name', firstName + ' ' + lastName)
+    history('/register-password')
+  }
+
+  
+
   const handleClickRegis = (e) => {
     e.preventDefault()
     setReqBody({
       ...reqBody,
-      email: email,
-      name: firstName,
+      email: localStorage.getItem('email'),
+      name: localStorage.getItem('first name'),
       password: password,
       phone: phone
     })
     setStartFetch(true)
-    console.log('check startfetch', reqBody);
+    console.log('check local', localStorage.getItem("email"));
   }
 
 
@@ -71,7 +82,8 @@ const RegisController = () => {
     setPasswordConfirmation,
     setPhone,
     history,
-    handleClickRegis
+    handleClickRegis,
+    handleClickSave
   }
 }
 

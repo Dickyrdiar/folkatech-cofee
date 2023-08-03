@@ -10,7 +10,7 @@ const RegisterEmail = () => {
     setEmail,
     setFirtsName,
     setLastName,
-    history
+    handleClickSave
   } = RegisController()
 
   return (
@@ -64,7 +64,7 @@ const RegisterEmail = () => {
               _hover={{
                 bg: '#EB3F36'
               }}
-              onClick={() => history('/register-password')}
+              onClick={handleClickSave}
               >
                 Selanjutnya
               </Button>
