@@ -79,9 +79,9 @@ const Sidebar = ({ filters, setFilters }) => {
                 <AccordionPanel pb={4}>
                   <CheckboxGroup colorScheme="green" value={filters.origin} onChange={(checkedItems) => handleCheckboxChange('origin', checkedItems)}>
                     <Stack spacing={2}>
-                      <Checkbox value="Africa">Africa</Checkbox>
-                      <Checkbox value="Asia">Asia</Checkbox>
-                      <Checkbox value="Central America">Central America</Checkbox>
+                      <Checkbox defaultChecked value="Africa">Africa</Checkbox>
+                      <Checkbox defaultChecked value="Asia">Asia</Checkbox>
+                      <Checkbox defaultChecked value="Central America">Central America</Checkbox>
                       {/* Add more origin options as needed */}
                     </Stack>
                   </CheckboxGroup>
@@ -105,8 +105,8 @@ const Sidebar = ({ filters, setFilters }) => {
                 <AccordionPanel pb={4}>
                   <CheckboxGroup colorScheme="purple" value={filters.species} onChange={(checkedItems) => handleCheckboxChange('species', checkedItems)}>
                     <Stack spacing={2}>
-                      <Checkbox value="Arabica">Arabica</Checkbox>
-                      <Checkbox value="Robusta">Robusta</Checkbox>
+                      <Checkbox defaultChecked value="Arabica">Arabica</Checkbox>
+                      <Checkbox defaultChecked value="Robusta">Robusta</Checkbox>
                       {/* Add more species options as needed */}
                     </Stack>
                   </CheckboxGroup>
@@ -130,9 +130,9 @@ const Sidebar = ({ filters, setFilters }) => {
                 <AccordionPanel pb={4}>
                   <CheckboxGroup colorScheme="blue" value={filters.roastLevel} onChange={(checkedItems) => handleCheckboxChange('roastLevel', checkedItems)}>
                     <Stack spacing={2}>
-                      <Checkbox value="Light">Light</Checkbox>
-                      <Checkbox value="Medium">Medium</Checkbox>
-                      <Checkbox value="Dark">Dark</Checkbox>
+                      <Checkbox defaultChecked value="Light">Light</Checkbox>
+                      <Checkbox defaultChecked value="Medium">Medium</Checkbox>
+                      <Checkbox defaultChecked value="Dark">Dark</Checkbox>
                       {/* Add more roast level options as needed */}
                     </Stack>
                   </CheckboxGroup>
@@ -156,8 +156,8 @@ const Sidebar = ({ filters, setFilters }) => {
                 <AccordionPanel pb={4}>
                   <CheckboxGroup colorScheme="teal" value={filters.tested} onChange={(checkedItems) => handleCheckboxChange('tested', checkedItems)}>
                     <Stack spacing={2}>
-                      <Checkbox value="Yes">Yes</Checkbox>
-                      <Checkbox value="No">No</Checkbox>
+                      <Checkbox defaultChecked value="Yes">Yes</Checkbox>
+                      <Checkbox defaultChecked value="No">No</Checkbox>
                       {/* Add more tested options as needed */}
                     </Stack>
                   </CheckboxGroup>
@@ -181,9 +181,9 @@ const Sidebar = ({ filters, setFilters }) => {
                 <AccordionPanel pb={4}>
                   <CheckboxGroup colorScheme="orange" value={filters.processing} onChange={(checkedItems) => handleCheckboxChange('processing', checkedItems)}>
                     <Stack spacing={2}>
-                      <Checkbox value="Washed">Washed</Checkbox>
-                      <Checkbox value="Natural">Natural</Checkbox>
-                      <Checkbox value="Honey">Honey</Checkbox>
+                      <Checkbox defaultChecked value="Washed">Washed</Checkbox>
+                      <Checkbox defaultChecked value="Natural">Natural</Checkbox>
+                      <Checkbox defaultChecked value="Honey">Honey</Checkbox>
                       {/* Add more processing options as needed */}
                     </Stack>
                   </CheckboxGroup>

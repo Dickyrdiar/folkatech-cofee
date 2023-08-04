@@ -1,7 +1,9 @@
+/* eslint-disable no-unused-vars */
 import Navbar from "../../components/Navbar"
 import { useState } from "react";
 import { Flex } from "@chakra-ui/react";
 import Sidebar from "../../components/sidebar"
+import SidebarWithHeader from "../../components/Layout";
 
 const DashboardItem = () => {
   const [filters, setFilters] = useState({
@@ -15,10 +17,7 @@ const DashboardItem = () => {
 
   return (
     <>
-      <Navbar />
-      <Flex>
-        <Sidebar filters={filters} setFilters={setFilters} />
-      </Flex>
+     <SidebarWithHeader />
     </>
   )
 }
