@@ -40,12 +40,11 @@ import { useState } from 'react'
 /* eslint-disable no-undef */
 const SidebarContent = ({ onClose, ...rest }) => {
   const [filters, setFilters] = useState({
-    price: 50,
-    origin: [],
-    species: [],
-    roastLevel: [],
-    tested: [],
-    processing: [],
+    keyword: '',
+    price: '10000,250000',
+    page: 1,
+    limit: 10,
+    order: 'product_name,ASC',
   });
 
   return (
@@ -169,7 +168,7 @@ const MobileNav = ({ onOpen, ...rest }) => {
   )
 }
 
-const SidebarWithHeader = () => {
+const SidebarWithHeader = ({ children }) => {
   const { isOpen, onOpen, onClose } = useDisclosure()
 
   return (
@@ -189,7 +188,7 @@ const SidebarWithHeader = () => {
       {/* mobilenav */}
       <MobileNav onOpen={onOpen} />
       <Box ml={{ base: 0, md: 60 }} p="4">
-        {/* Content */}
+        {children}
       </Box>
     </Box>
   )

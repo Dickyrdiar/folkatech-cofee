@@ -1,23 +1,21 @@
 /* eslint-disable no-unused-vars */
 import Navbar from "../../components/Navbar"
 import { useState } from "react";
-import { Flex } from "@chakra-ui/react";
+import { Box, Flex } from "@chakra-ui/react";
 import Sidebar from "../../components/sidebar"
 import SidebarWithHeader from "../../components/Layout";
+import DashboardController from "../../controller/dashboard.controller";
 
 const DashboardItem = () => {
-  const [filters, setFilters] = useState({
-    price: 50,
-    origin: [],
-    species: [],
-    roastLevel: [],
-    tested: [],
-    processing: [],
-  });
+  const {response} = DashboardController()
+
+  console.log('check response', response);
 
   return (
     <>
-     <SidebarWithHeader />
+      <SidebarWithHeader>
+        <Box>this is data</Box>
+      </SidebarWithHeader>
     </>
   )
 }
