@@ -1,4 +1,4 @@
-import { Box, Flex, Stack, useColorModeValue,  Button,  Divider, Text} from "@chakra-ui/react"
+import { Box, Flex, Stack, useColorModeValue,  Button,  Divider, Text, Spinner} from "@chakra-ui/react"
 import FormInput from "../../components/Forms"
 import { Link } from "react-router-dom"
 import FormInputPassword from "../../components/Forms/passwordForm"
@@ -13,9 +13,17 @@ const RegisterPassword = () => {
      show, 
      handleClickRegis,
      setPassword,
-     setPhone
+     setPhone,
+     loading
     } = RegisController()
 
+    {loading && <Spinner 
+      thickness='4px'
+      speed='0.65s'
+      emptyColor='gray.200'
+      color='#730C07'
+      size='xl'
+    />}
   return (
     <Flex
     minH={'100vh'}

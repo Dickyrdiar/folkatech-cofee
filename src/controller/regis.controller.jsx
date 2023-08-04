@@ -61,7 +61,6 @@ const RegisController = () => {
       phone: phone
     })
     setStartFetch(true)
-    console.log('check local', localStorage.getItem("email"));
   }
 
 
@@ -74,6 +73,7 @@ const RegisController = () => {
     passwordConfirmation,
     reqBody,
     phone,
+    loading,
     handelClickShow,
     setEmail,
     setLastName,

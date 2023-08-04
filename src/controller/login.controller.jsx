@@ -32,9 +32,9 @@ const LoginController = () => {
     if (responseLogin) {
       setResponse(responseLogin)
       localStorage.setItem("token", responseLogin?.data?.token)
-      // setTimeout(() => {
-      //   window.location.assign('/dashboard')
-      // }, 500)
+      setTimeout(() => {
+        window.location.assign('/dashboard')
+      }, 500)
       console.log('check respoonse', responseLogin?.data?.token);
     }
     setStartFetch(false)
@@ -60,7 +60,6 @@ const LoginController = () => {
       email: email,
       password: password
     })
-    console.log('masuk');
     setStartFetch(true)
   }
 
