@@ -32,13 +32,18 @@ import {
   FiMenu,
   FiBell,
   FiChevronDown,
+  FiHeart,
+  FiUsers,
+  FiBriefcase
 } from 'react-icons/fi'
 import Sidebar from '../sidebar'
 import { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 
 
 /* eslint-disable no-undef */
 const SidebarContent = ({ onClose, ...rest }) => {
+  const history = useNavigate()
   const [filters, setFilters] = useState({
     keyword: '',
     price: '10000,250000',
@@ -103,7 +108,8 @@ const NavItem = ({ icon, children, ...rest }) => {
   )
 }
 
-const MobileNav = ({ onOpen, ...rest }) => {
+
+export const MobileNav = ({ onOpen, ...rest }) => {
   return (
     <Flex
       ml={{ base: 0, md: 60 }}
@@ -132,7 +138,24 @@ const MobileNav = ({ onOpen, ...rest }) => {
       </Text>
 
       <HStack spacing={{ base: '0', md: '6' }}>
-        <IconButton size="lg" variant="ghost" aria-label="open menu" icon={<FiBell />} />
+        <IconButton
+          icon={<FiHeart />}
+          aria-label="Save"
+          colorScheme="white"
+          variant="ghost"
+        />
+          <IconButton
+          icon={<FiBriefcase/>}
+          aria-label="Save"
+          colorScheme="white"
+          variant="ghost"
+        />
+        <IconButton
+          icon={<FiUsers />}
+          aria-label="Love"
+          colorScheme="white"
+          variant="ghost"
+        />
         <Flex alignItems={'center'}>
           <Menu>
             <MenuButton py={2} transition="all 0.3s" _focus={{ boxShadow: 'none' }}>
@@ -155,11 +178,7 @@ const MobileNav = ({ onOpen, ...rest }) => {
             <MenuList
               bg={useColorModeValue('white', 'gray.900')}
               borderColor={useColorModeValue('gray.200', 'gray.700')}>
-              <MenuItem>Profile</MenuItem>
-              <MenuItem>Settings</MenuItem>
-              <MenuItem>Billing</MenuItem>
-              <MenuDivider />
-              <MenuItem>Sign out</MenuItem>
+              <MenuItem onClick={() => history("/")}>Sign out</MenuItem>
             </MenuList>
           </Menu>
         </Flex>
