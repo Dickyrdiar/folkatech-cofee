@@ -5,8 +5,6 @@ import SidebarWithHeader from "../../components/Layout";
 import DashboardController from "../../controller/dashboard.controller";
 import Card from "../../components/Card";
 import { dataDummy } from "../../dataDummy";
-import { useState } from "react";
-import { useEffect } from "react";
 
 const DashboardItem = () => {
   const {response, handleClickDetail} = DashboardController()
@@ -31,6 +29,7 @@ const DashboardItem = () => {
                 image={value.images}
                 clicked={value.id}
                 // onClick={handleClickDetail(value.id)}
+                onClick={handleClickDetail(value.id)}
               />
             </SimpleGrid>
           ))}

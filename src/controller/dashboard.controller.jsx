@@ -1,9 +1,11 @@
 /* eslint-disable no-unused-vars */
 import { useEffect } from "react"
 import { useState } from "react"
+import { useNavigate } from "react-router-dom"
 import { useFetchData } from "../hooks/useData"
 
 const DashboardController = () => {
+  const history = useNavigate()
   const [response, setResponse] = useState('')
 
   // usefetch
@@ -21,12 +23,10 @@ const DashboardController = () => {
   }, [responseData])
 
   const handleClickDetail = (val) => {
-    // val.preventDefault()
-    console.log("val", val)
     history(`/product/${val.id}`)
   }
 
-  return { response, errorData, loading, handleClickDetail }
+  return { response, errorData, loading, handleClickDetail, history }
   
 }
 

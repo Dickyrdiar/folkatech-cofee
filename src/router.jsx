@@ -13,7 +13,7 @@ const AppIndex = () => {
         <Route path="/register-email" element={<RegisterEmail />} />
         <Route path="/register-password" element={<RegisterPassword />} />
         <Route path="/dashboard" element={<DashboardItem />} />
-        <Route path="/product" element={<DetailProcut />} />
+        <Route path="/product/:id" element={<DetailProcut />} />
       </Routes>
     </BrowserRouter>
   )

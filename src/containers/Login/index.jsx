@@ -81,7 +81,7 @@ const Login = () => {
             </Stack>
 
             <Stack spacing={2} align={'center'} justify={'center'}>
-             <Text>Belum punya akun?  <Link href={'/register-email'}> Daftar Sekarang </Link> </Text>
+             <Text>Belum punya akun?  <Link href='/register-email'> Daftar Sekarang </Link> </Text>
             </Stack>
           </Box>
         </Stack>
