@@ -3,6 +3,7 @@
 /* eslint-disable no-unused-vars */
 // import { MobileNav } from "../../components/Layout"
 import { useParams } from "react-router-dom"
+import { useState } from "react";
 import WithSubnavigation from "../../components/Navbar"
 import {
  
@@ -15,15 +16,28 @@ import {
   Image,
   useBreakpointValue,
   useColorModeValue,
+  IconButton,
   Container,
   Icon
 } from '@chakra-ui/react'
 import { FaStar, FaStarHalfAlt, FaRegStar } from 'react-icons/fa';
+import { FiPlus, FiMinus } from 'react-icons/fi'
 
 
 
 const DetailProcut = ({ rating }) => {
   const { params } = useParams()
+  const [orderCount, setOrderCount] = useState(0);
+
+  const handleAddOrder = () => {
+    setOrderCount((prevCount) => prevCount + 1);
+  };
+
+  const handleRemoveOrder = () => {
+    if (orderCount > 0) {
+      setOrderCount((prevCount) => prevCount - 1);
+    }
+  };
 
   console.log('check id', params);
 
@@ -67,9 +81,24 @@ const DetailProcut = ({ rating }) => {
             <Stack spacing={6} maxW={'lg'}>
               <Heading lineHeight={"normal"} fontWeight={700} fontSize={'24px'}>APEL MALANG ESPRESSO Finca Yudhistira Natural</Heading>
               <Text fontSize={"22px"} fontWeight={500}>APEL MALANG ESPRESSO</Text>
-            </Stack>
-            <Stack spacing={2}>
-            
+
+              <Flex align="center" mb={4}>
+                <IconButton
+                  icon={<FiMinus />}
+                  aria-label="Remove Order"
+                  colorScheme="blue"
+                  onClick={handleRemoveOrder}
+                />
+                <Text mx={2} fontWeight="bold">
+                  {orderCount}
+                </Text>
+                <IconButton
+                  icon={<FiPlus />}
+                  aria-label="Add Order"
+                  colorScheme="blue"
+                  onClick={handleAddOrder}
+                />
+              </Flex>
             </Stack>
           </Flex> 
         </Stack>

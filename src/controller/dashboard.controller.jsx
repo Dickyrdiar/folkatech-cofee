@@ -2,6 +2,7 @@
 import { useEffect } from "react"
 import { useState } from "react"
 import { useNavigate } from "react-router-dom"
+import { dataDummy } from "../dataDummy"
 import { useFetchData } from "../hooks/useData"
 
 const DashboardController = () => {
@@ -24,6 +25,7 @@ const DashboardController = () => {
 
   const handleClickDetail = (val) => {
     history(`/product/${val.id}`)
+    localStorage.getItem("response", response)
   }
 
   return { response, errorData, loading, handleClickDetail, history }

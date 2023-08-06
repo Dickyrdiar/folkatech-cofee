@@ -19,7 +19,7 @@ const DashboardItem = () => {
           <Card />
         </Box> */}
         <Flex minH={'100vh'}>
-          {arrayDummy[0].map((value) => (
+          {response[0].map((value) => (
             <SimpleGrid key={value.id} spacing={4} templateColumns='repeat(auto-fill, minmax(200px, 1fr)'>
               <Card 
                 key={value.id} 
