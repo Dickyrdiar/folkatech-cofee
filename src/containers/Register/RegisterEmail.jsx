@@ -75,7 +75,7 @@ const RegisterEmail = () => {
           </Stack>
 
           <Stack spacing={2} align={'center'} justify={'center'}>
-          <Text href='#'>Sudah Punya Akun?  <Link href={() => console.log('back to login')}> Masuk </Link> </Text>
+          <Text href='#'>Sudah Punya Akun?  <Link to="/"> Masuk </Link> </Text>
           </Stack>
         </Box>
       </Stack>

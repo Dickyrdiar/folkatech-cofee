@@ -16,4 +16,6 @@
 
 - serta di list product sudah saya coba integrasikan tetapi karena koneksi api yang tidak stabil maka sering terputus dan tidak mendapatkan response dari API
 
+- disini saya menggunakan localstorage sebagai data management agar menyingkat waktu 
+
 
