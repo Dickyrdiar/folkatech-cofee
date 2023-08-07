@@ -28,6 +28,13 @@ import { FiPlus, FiMinus } from 'react-icons/fi'
 const DetailProcut = ({ rating }) => {
   const { params } = useParams()
   const [orderCount, setOrderCount] = useState(0);
+  const response = localStorage.getItem("response")
+  const {
+    name,
+    short_description,
+    description,
+    image
+  } = response
 
   const handleAddOrder = () => {
     setOrderCount((prevCount) => prevCount + 1);
@@ -79,8 +86,8 @@ const DetailProcut = ({ rating }) => {
           </Flex>
           <Flex p={10} flex={1}>
             <Stack spacing={6} maxW={'lg'}>
-              <Heading lineHeight={"normal"} fontWeight={700} fontSize={'24px'}>APEL MALANG ESPRESSO Finca Yudhistira Natural</Heading>
-              <Text fontSize={"22px"} fontWeight={500}>APEL MALANG ESPRESSO</Text>
+              <Heading lineHeight={"normal"} fontWeight={700} fontSize={'24px'}>{name}</Heading>
+              <Text fontSize={"22px"} fontWeight={500}>{short_description}</Text>
 
               <Flex align="center" mb={4}>
                 <IconButton
