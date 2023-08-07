@@ -1,21 +1,19 @@
-# Folkatech – ReactJS Test
+# Folkatech - ReactJS Test
 
-- React js versi 18
+- React js version 18
 
-- Css Framework menggunakan Chakra ui, Frammer motion dan juga       React-icon untuk icon agar lebih mudah pada mode responsive
+- Css Framework using Chakra ui, Frammer motion and also React-icon for icons to make it easier in responsive mode.
 
-- dalam integrasi pada FE saya menggunakan custom hooks pada react yang saya beri nama useLogin
+- in integration with FE I use custom hooks on react which I named useLogin
 
-- untuk penyimpana temporary saya menggunakan localstorage bisa juga menggunakan state management tapi untuk menyingkat waktu saya menggunakna localstorage
+- for temporary storage I use localstorage can also use state management but to shorten the time I use localstorage
 
 # Note
 
-- disini ada memang beberapa design yang belum sesuai karena lebih menitiberatkan pada fungsional integrasi dengan BE
+- Here there are indeed some designs that are not appropriate because they are more focused on functional integration with BE
 
-- karena waktu yang diberikan cukup singkat sehingga ada beberapa ui yang belum sesuai tapi saya sudah menyesuaikan data dari BE yang harus ditampilak 
+- because the time given is quite short so there are some ui that are not suitable but I have adjusted the data from BE that must be displayed. 
 
-- serta di list product sudah saya coba integrasikan tetapi karena koneksi api yang tidak stabil maka sering terputus dan tidak mendapatkan response dari API
+- as well as in the product list I have tried to integrate but because of the unstable api connection, it is often disconnected and does not get a response from the API.
 
-- disini saya menggunakan localstorage sebagai data management agar menyingkat waktu 
-
-
+- here I use localstorage as data management to shorten the time
